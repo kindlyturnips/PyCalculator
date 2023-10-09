@@ -1,7 +1,35 @@
 #----------------------------------------------------------------------------------
 #                 SOUNDING OBJECT TO READ AND FIND SOUNDING DATA
 #----------------------------------------------------------------------------------
-class Sounding():
+
+class Operations():
+    def __init__(self) -> None:
+        #Initialize Operations
+        self.num1 = None
+        self.num2 = None
+        self.ans  = None
+    #Method to Add
+    def addNum(self,num1,num2,ans):
+        self.ans = self.num1 + self.num2
+        return self.ans
+
+    #Method to Subtract
+    def subNum(self,num1,num2,ans):
+        self.ans = self.num1 - self.num2
+        return self.ans
+    
+    #Method to Multiply
+    def mulNum(self,num1,num2,ans):
+        self.ans = self.num1 * self.num2
+        return self.ans
+    
+    #Method to Divide
+    def divNum(self,num1,num2,ans):
+        self.ans = self.num1 / self.num2
+        return self.ans   
+
+
+""" class Sounding():
     def __init__(self,filename=None):
         #Initialize Sounding Variables
         #Optional filename argument with default
@@ -68,6 +96,6 @@ class Sounding():
                   Test Range:  {test_range}\n\
                   Test Depth:  {test_depth}\n\
                   Test Answer: {test_answer}\n")
-
+ """
 
 
