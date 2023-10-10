@@ -1,11 +1,11 @@
 #Configuration Constants
 
-NAME = "Simple Calculator by Chris"
+NAME = "PyCalc"
 
 #Window Dimensions
-WINDOW_HEIGHT = 500
-WINDOW_WIDTH  = 400
+WINDOW_HEIGHT = 210
+WINDOW_WIDTH  = 150
 
 #Button Dimensions
-BUTTON_HEIGHT = WINDOW_WIDTH // 400
-BUTTON_WIDTH  = WINDOW_HEIGHT // 500
+BUTTON_HEIGHT = 1
+BUTTON_WIDTH  = 1
