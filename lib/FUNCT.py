@@ -1,6 +1,16 @@
-#----------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
 #                 Operations Object for Simple Calculator Application
-#----------------------------------------------------------------------------------
+#
+#                 Lessons Learned After Completion:
+#                 1. Have a seperate Number object , Operand object & Equation Object
+#                 2. Pressing a button in the GUI creates an instance of the Number object
+#                    in the Equation Object as the state variable
+#                 3. Number object contains variables including value stored as interger or float
+#                    sign, rounding
+#                 4. Operand is straightforward
+#                 5. The Equation object has a state variable as a string that is updated
+#                    when the Number state variables are updated for the GUI dialoge
+#------------------------------------------------------------------------------------------------------
 class Operations():
     def __init__(self) -> None:
         #Initialize Operations
@@ -19,12 +29,14 @@ class Operations():
     def updatePar(self):
         #Format Numbers
         def formatNum(num):
-            if float(num) % 1 == 0 and num[-1] != ".": 
-                num = str(int(float(num)))
-                print("hi")
+            c = "" 
+            if "⁻" in num:
+                num = num.replace("⁻","")
+                c="⁻"
+            if float(num) % 1 == 0 and "." not in num:
+                num = c + str(int(float(num)))
             elif float(num) % 1 != 0:
-                num = str(round(float(num),6))
-            
+                num = c + str(round(float(num),6))
             return num
 
         #Update state variables
@@ -152,9 +164,8 @@ class Operations():
         self.updatePar()
 
     def solve(self):
-        #Define num & oper
-        spliteq = self.eq.split(" ")
-        self.num1, self.oper, self.num2
+        if self.oper == "":
+            return
 
         #Format negatives nums
         if "⁻" in self.num1: self.num1 = -1 * float(self.num1[1:])

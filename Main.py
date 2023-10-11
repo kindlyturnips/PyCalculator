@@ -1,20 +1,21 @@
-#----------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
 #                                PyCalc.py                
-# Simple Calculator Application
+#                   Simple Calculator Application
 #
-#10/09/2023
-#Created by Christopher Turnipseed
+#                               10/09/2023
+#                   Created by Christopher Turnipseed
 #
-#----------------------------------------------------------------------------------
+#               Lessons Learned After Completion:
+#                 1. Setting up the GUI is rather tedious, as always
+#                 2. Maybe to tighten up the code a list of the buttons & their arguments
+#                    could be iterated through instead
+#--------------------------------------------------------------------------------------------
 
 import argparse
-import numpy as np
 import tkinter as tk
-import tkinter.messagebox
 import lib.CONFIG as config
 import lib.FUNCT as funct
 
-   
 #----------------------------------------------------------------------------------
 #                                  GUI OBJECT
 #----------------------------------------------------------------------------------
